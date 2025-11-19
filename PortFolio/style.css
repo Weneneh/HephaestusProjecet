@@ -1,0 +1,73 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #080808; /* negro profundo minimalista */
+  color: #fff;
+}
+
+
+/* Hero */
+#hero {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+  background: linear-gradient(135deg, #111111, #1a1a1a); /* degradado oscuro suave */
+  overflow:hidden;
+}
+
+
+.hero-content { animation: fadeInUp 1.5s ease forwards; opacity:0; }
+
+.hero-content h1 { font-size:3rem; margin-bottom:1rem; }
+.hero-content p { font-size:1.2rem; margin-bottom:2rem; }
+
+.btn {
+  padding:0.8rem 1.5rem;
+  background:#1f1f1f; /* gris oscuro */
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  border: 1px solid #444; /* borde sutil */
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background:#333; /* un gris un poco más claro */
+  color:#ffd700;   /* toque minimalista dorado */
+  border-color: #ffd700;
+}
+
+/* Projects */
+#projects { padding:4rem 2rem; background:#121212; text-align:center; }
+.projects-container {
+  display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; margin-top:2rem;
+}
+.project-card {
+  background:#121212; /* más oscuro y uniforme */
+  padding:1.5rem;
+  border-radius:12px;
+  width:250px;
+  opacity:0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid #222; /* borde sutil */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+  border-color: #ffd700; /* toque minimalista dorado al hover */
+}
+
+
+
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateY(50px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
